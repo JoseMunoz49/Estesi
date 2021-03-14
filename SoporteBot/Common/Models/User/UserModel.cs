@@ -14,5 +14,8 @@ namespace SoporteBot.Common.Models.User
         public string channel { get; set; }
 
         public DateTime registerDate { get; set; }
+
+        
+
     }
 }

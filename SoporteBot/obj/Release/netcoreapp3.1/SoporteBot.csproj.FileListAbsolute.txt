@@ -3,7 +3,6 @@ C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\DeploymentTe
 C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\DeploymentTemplates\preexisting-rg-parameters.json
 C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\DeploymentTemplates\template-with-new-rg.json
 C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\DeploymentTemplates\template-with-preexisting-rg.json
-C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\SoporteBot.exe
 C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\appsettings.json
 C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\SoporteBot.deps.json
@@ -100,5 +99,25 @@ C:\Users\59399\Desktop\Soporte\SoporteBot\obj\Release\netcoreapp3.1\staticwebass
 C:\Users\59399\Desktop\Soporte\SoporteBot\obj\Release\netcoreapp3.1\SoporteBot.dll
 C:\Users\59399\Desktop\Soporte\SoporteBot\obj\Release\netcoreapp3.1\SoporteBot.pdb
 C:\Users\59399\Desktop\Soporte\SoporteBot\obj\Release\netcoreapp3.1\SoporteBot.genruntimeconfig.cache
-C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\Properties\ServiceDependencies\soportebot-webapp - Web Deploy\profile.arm.json
-C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\Properties\ServiceDependencies\jose-webapp - Web Deploy\profile.arm.json
+C:\Users\59399\Desktop\Soporte\SoporteBot\obj\Release\netcoreapp3.1\scopedcss\bundle\SoporteBot.styles.css
+C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\Microsoft.ApplicationInsights.dll
+C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\Microsoft.ApplicationInsights.AspNetCore.dll
+C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\Microsoft.AI.DependencyCollector.dll
+C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\Microsoft.AI.EventCounterCollector.dll
+C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\Microsoft.AI.WindowsServer.dll
+C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\Microsoft.Extensions.Logging.ApplicationInsights.dll
+C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
+C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
+C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\Azure.Core.dll
+C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\Azure.Identity.dll
+C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\Azure.Storage.Blobs.dll
+C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\Azure.Storage.Common.dll
+C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\Azure.Storage.Files.Shares.dll
+C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\Azure.Storage.Queues.dll
+C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\Microsoft.Extensions.Azure.dll
+C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\59399\Desktop\Soporte\SoporteBot\bin\Release\netcoreapp3.1\AdaptiveCards.dll

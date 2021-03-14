@@ -4,9 +4,15 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <LangVersion>latest</LangVersion>
     <UserSecretsId>ec1e5150-0aa2-4a56-b7e0-8b75f042c76c</UserSecretsId>
+    <ApplicationInsightsResourceId>/subscriptions/25e4d87d-a951-42df-9253-4f9cb5bd23b1/resourceGroups/tesis-bot/providers/microsoft.insights/components/tesisbot-insights</ApplicationInsightsResourceId>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AdaptiveCards" Version="2.4.0" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.3.0" />
+    <PackageReference Include="Azure.Storage.Files.Shares" Version="12.1.0" />
+    <PackageReference Include="Azure.Storage.Queues" Version="12.2.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.15.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.1" />
     <PackageReference Include="Microsoft.Bot.Builder.AI.Luis" Version="4.10.3" />
     <PackageReference Include="Microsoft.Bot.Builder.AI.QnA" Version="4.10.3" />
@@ -14,6 +20,7 @@
     <PackageReference Include="Microsoft.Bot.Builder.Dialogs" Version="4.10.3" />
     <PackageReference Include="Microsoft.Bot.Builder.Integration.AspNet.Core" Version="4.10.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Cosmos" Version="3.1.9" />
+    <PackageReference Include="Microsoft.Extensions.Azure" Version="1.0.0" />
   </ItemGroup>
 
     <ItemGroup>

@@ -17,55 +17,61 @@ namespace SoporteBot.Common.Cards
         }
         private static Activity CreateCarousel()
         {
+            /*var Ingreso = new SigninCard
+            {
+                Text = "Primero ingresa al siguiente enlace",
+                Buttons = new List<CardAction> { new CardAction(ActionTypes.Signin, "Presiona aquí para ingresar al portal", value: "https://aulavirtual.pucese.edu.ec/") },
+            };*/
             var Ingreso = new HeroCard
             {
-                Subtitle = "PASO 1",
-                Text = "Ingresa a https://aulavirtual.pucese.edu.ec/ y accede a la plataforma",
-                Images = new List<CardImage> { new CardImage("https://clinicbotstorage12.blob.core.windows.net/images/ingreso.png") }
-
+                Title = "PASO 1",
+                Subtitle = "Haga click en el siguiente enlace para redireccionar a la plataforma e ingrese <a href='https://aulavirtual.pucese.edu.ec/'>Página principal Aula Virtual</a>",
+               
+                Images = new List<CardImage> { new CardImage("https://tesisstorage.blob.core.windows.net/images/ingreso.png") },
+                
             };
             var usuario = new HeroCard
             {
-                Subtitle = "PASO 2",
-                Text = "Ingresa tu correo institucional",
+                Title = "PASO 2",
+                Subtitle = "Ingresa tu correo institucional",
 
                 Images = new List<CardImage> {
-                    new CardImage("https://clinicbotstorage12.blob.core.windows.net/images/crede1.png")
+                    new CardImage("https://tesisstorage.blob.core.windows.net/images/crede1.png")
                      }
 
             };
 
             var contra = new HeroCard
             {
-                Subtitle = "PASO 3",
-                Text = "Ingresa tu contraseña del correo institucional",
+                Title = "PASO 3",
+                Subtitle = "Ingresa tu contraseña del correo institucional",
 
                 Images = new List<CardImage> {
-                    new CardImage("https://clinicbotstorage12.blob.core.windows.net/images/crede2.png")
+                    new CardImage("https://tesisstorage.blob.core.windows.net/images/crede2.png")
                      }
 
 
             };
             var inicio = new HeroCard
             {
-                Subtitle = "PASO 4",
-                Text = "A tu lado izquierdo selecciona 'Inicio del sitio'",
-                Images = new List<CardImage> { new CardImage("https://clinicbotstorage12.blob.core.windows.net/images/Iniciositio.png") }
+                Title = "PASO 4",
+                Subtitle = "A tu lado izquierdo selecciona <b>Inicio del sitio</b>",
+                Images = new List<CardImage> { new CardImage("https://tesisstorage.blob.core.windows.net/images/Iniciositio.png") }
 
             };
 
             var iniciositio = new HeroCard
             {
-                Subtitle = "PASO 5",
-                Text = "Busca la carrera que estás cursando y elige el nivel en el que te encuentras. Al realizar esto se mostrarán todos los cursos de ese nivel.",
-                Images = new List<CardImage> { new CardImage("https://clinicbotstorage12.blob.core.windows.net/images/seleccion.png") }
+                Title = "PASO 5",
+                Subtitle = "Busca la carrera que estás cursando y elige el nivel en el que te encuentras. Se mostratarán los cursos de ese nivel",
+                Images = new List<CardImage> { new CardImage("https://tesisstorage.blob.core.windows.net/images/seleccion.png") }
 
             };
             var seleccion = new HeroCard
             {
-                Subtitle = "PASO 6",
-                Text = "Una vez estes dentro, podrás utilizar el buscador de cursos que el sistema proporciona.",
-                Images = new List<CardImage> { new CardImage("https://clinicbotstorage12.blob.core.windows.net/images/buscador2.png") }
+                Title = "PASO 6",
+                Subtitle = "Una vez estes dentro, podrás utilizar el buscador de cursos que el sistema proporciona.",
+                Images = new List<CardImage> { new CardImage("https://tesisstorage.blob.core.windows.net/images/buscador2.png") }
 
             };
 

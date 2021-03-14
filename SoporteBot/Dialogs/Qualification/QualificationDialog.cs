@@ -29,9 +29,9 @@ namespace SoporteBot.Dialogs.Qualification
         {
 
             var options = stepContext.Context.Activity.Text;
-            await stepContext.Context.SendActivityAsync($"Gracias por tu {options}", cancellationToken: cancellationToken);
+            await stepContext.Context.SendActivityAsync($"<b>Gracias por tu {options}<b>", cancellationToken: cancellationToken);
             await Task.Delay(2000);
-            await stepContext.Context.SendActivityAsync("Ten un lindo día 😊, espero verte pronto 😉", cancellationToken: cancellationToken);
+            await stepContext.Context.SendActivityAsync("<b>Ten un lindo día 😊, espero verte pronto 😉<b>", cancellationToken: cancellationToken);
 
             //GUardar calificacion
             await SaveQualification(stepContext, options);
@@ -47,6 +47,7 @@ namespace SoporteBot.Dialogs.Qualification
             qualificationModel.idUser = stepContext.Context.Activity.From.Id;
             qualificationModel.qualification = options;
             qualificationModel.registerDate = DateTime.Now.Date;
+
 
             await _databaseService.Qualification.AddAsync(qualificationModel);
             await _databaseService.SaveAsync();

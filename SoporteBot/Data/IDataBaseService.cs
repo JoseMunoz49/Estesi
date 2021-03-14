@@ -8,11 +8,13 @@ using System.Threading.Tasks;
 
 namespace SoporteBot.Data
 {
-    public interface IDataBaseService
+    public interface IDataBaseService 
     {
         DbSet<UserModel> User { get; set; }
 
         DbSet<QualificationModel> Qualification { get; set; }
+
+        
         Task<bool> SaveAsync();
     }
 }

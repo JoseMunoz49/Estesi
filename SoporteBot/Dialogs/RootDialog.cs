@@ -58,8 +58,20 @@ namespace SoporteBot.Dialogs
                 case "Matrículas":
                     await IntentMatriculas(stepContext, luisResult, cancellationToken);
                     break;
+                case "Video":
+                    await IntentVideo(stepContext, luisResult, cancellationToken);
+                    break;
+                case "Perfil":
+                    await IntentPerfil(stepContext, luisResult, cancellationToken);
+                    break;
+                case "Calificacciones":
+                    await IntentCalificaciones(stepContext, luisResult, cancellationToken);
+                    break;
                 case "BuscarCurso":
                     await IntentBuscarCurso(stepContext, luisResult, cancellationToken);
+                    break;
+                case "Confirmacion":
+                    await Confirmacion(stepContext, luisResult, cancellationToken);
                     break;
                 case "VerOpciones":
                     await IntentVerOpciones(stepContext, luisResult, cancellationToken);
@@ -82,9 +94,6 @@ namespace SoporteBot.Dialogs
 
 
 
-
-
-
         #region IntentLuis
         private async Task IntentVerCentroContacto(WaterfallStepContext stepContext, RecognizerResult luisResult, CancellationToken cancellationToken)
         {
@@ -98,24 +107,64 @@ namespace SoporteBot.Dialogs
             await stepContext.Context.SendActivityAsync("En qué más te puedo ayudar?", cancellationToken: cancellationToken);
             
         }
+
+        private async Task IntentPerfil(WaterfallStepContext stepContext, RecognizerResult luisResult, CancellationToken cancellationToken)
+        {
+            await stepContext.Context.SendActivityAsync($"**Para editar su perfil, porfavor siga los siguientes pasos 📜**", cancellationToken: cancellationToken);
+            await Task.Delay(2000);
+            await Perfil.ToShow(stepContext, cancellationToken);
+            await Task.Delay(5000);
+            await RespuestaBot.ToShow(stepContext, cancellationToken);
+        }
+
+        private async Task Confirmacion(WaterfallStepContext stepContext, RecognizerResult luisResult, CancellationToken cancellationToken)
+        {
+            await SegundaRespuesta.ToShow(stepContext, cancellationToken);
+        }
+
+        private async Task IntentCalificaciones(WaterfallStepContext stepContext, RecognizerResult luisResult, CancellationToken cancellationToken)
+        {
+            await stepContext.Context.SendActivityAsync($"**Para ver sus calificaciones 💻 realice los siguientes pasos:**", cancellationToken: cancellationToken);
+            await Task.Delay(3000);
+            await VerCalificaciones.ToShow(stepContext, cancellationToken);
+            await Task.Delay(5000);
+            await RespuestaBot.ToShow(stepContext, cancellationToken);
+        }
+
+        private async Task IntentVideo(WaterfallStepContext stepContext, RecognizerResult luisResult, CancellationToken cancellationToken)
+        {
+            await stepContext.Context.SendActivityAsync($"**Para utilizar el aulavirtual desde el móvil 📳:**", cancellationToken: cancellationToken);
+            await Task.Delay(1000);
+            await stepContext.Context.SendActivityAsync($"**Por favor mire el siguiente video 😊**", cancellationToken: cancellationToken);
+            await Task.Delay(2000);
+            await VideoMoodle.ToShow(stepContext, cancellationToken);
+            await Task.Delay(5000);
+            await RespuestaBot.ToShow(stepContext, cancellationToken);
+        }
         private async Task IntentBuscarCurso(WaterfallStepContext stepContext, RecognizerResult luisResult, CancellationToken cancellationToken)
         {
-            await stepContext.Context.SendActivityAsync($"Para acceder a un curso 💻 realice los siguientes pasos:", cancellationToken: cancellationToken);
+            await stepContext.Context.SendActivityAsync($"**Para acceder a un curso 📒 realice los siguientes pasos:**", cancellationToken: cancellationToken);
             await Task.Delay(3000);
             await BuscarCurso.ToShow(stepContext, cancellationToken);
+            await Task.Delay(5000);
+            await RespuestaBot.ToShow(stepContext, cancellationToken);
         }
 
         private async Task IntentMatriculas(WaterfallStepContext stepContext, RecognizerResult luisResult, CancellationToken cancellationToken)
         {
-            await stepContext.Context.SendActivityAsync($"Para matricularte a un curso 📜", cancellationToken: cancellationToken);
+            await stepContext.Context.SendActivityAsync($"**Para matricularte a un curso 📜**", cancellationToken: cancellationToken);
             await Task.Delay(2000);
             await MatriculasCurso.ToShow(stepContext, cancellationToken);
+            await Task.Delay(5000);
+            await RespuestaBot.ToShow(stepContext, cancellationToken);
+            
+           
         }
         private async Task<DialogTurnResult> IntentCalificar(WaterfallStepContext stepContext, RecognizerResult luisResult, CancellationToken cancellationToken)
         {
-            await stepContext.Context.SendActivityAsync("No te preocupes, espero haberte ayudado 😊", cancellationToken: cancellationToken);
+            await stepContext.Context.SendActivityAsync("**No te preocupes, espero haberte ayudado 😊**", cancellationToken: cancellationToken);
             await Task.Delay(2000);
-            await stepContext.Context.SendActivityAsync("Podrías ayudarme a mejorar, danos tu opinión calificando tu experiencia porfavor ❤ ", cancellationToken: cancellationToken);
+            await stepContext.Context.SendActivityAsync("**Podrías ayudarme a mejorar, danos tu opinión calificando tu experiencia por favor ❤**", cancellationToken: cancellationToken);
             await Task.Delay(2000);
             return await stepContext.BeginDialogAsync(nameof(QualificationDialog), cancellationToken: cancellationToken);
 
@@ -123,15 +172,16 @@ namespace SoporteBot.Dialogs
 
         private async Task IntentVerOpciones(WaterfallStepContext stepContext, RecognizerResult luisResult, CancellationToken cancellationToken)
         {
-            await stepContext.Context.SendActivityAsync("Te mostraré como puedo ayudarte 👌", cancellationToken: cancellationToken);
+            await stepContext.Context.SendActivityAsync("**Te mostraré como puedo ayudarte** 👌", cancellationToken: cancellationToken);
             await MainOptionsCard.ToShow(stepContext, cancellationToken);
         }
 
         private async Task IntentSaludar(WaterfallStepContext stepContext, RecognizerResult luisResult, CancellationToken cancellationToken)
         {
-            await stepContext.Context.SendActivityAsync($"Hola soy Tiny 😀 tu asistente de servicios de TI virtual, en qué puedo ayudarte 😊?", cancellationToken: cancellationToken);
+            await stepContext.Context.SendActivityAsync($"**Hola soy Tiny 😀 tu asistente de servicios de TI virtual, ¿en qué puedo ayudarte 😊?**", cancellationToken: cancellationToken);
             await Task.Delay(2000);
             await IntentVerOpciones(stepContext, luisResult, cancellationToken);
+
         }
 
         /*private async Task IntentAgradecer(WaterfallStepContext stepContext, RecognizerResult luisResult, CancellationToken cancellationToken)
@@ -155,9 +205,12 @@ namespace SoporteBot.Dialogs
             if (score >= 0.5)
             {
                 await stepContext.Context.SendActivityAsync(response, cancellationToken: cancellationToken);
-            }else
+                await Task.Delay(5000);
+                await RespuestaBot.ToShow(stepContext, cancellationToken);
+            }
+            else
             {
-                await stepContext.Context.SendActivityAsync($"Lo siento 😟, no pude entenderte 😔", cancellationToken: cancellationToken);
+                await stepContext.Context.SendActivityAsync($"**Lo siento 😟, no pude entenderte 😔**", cancellationToken: cancellationToken);
                 await Task.Delay(2000);
                 await IntentVerOpciones(stepContext, luisResult, cancellationToken);
             }
